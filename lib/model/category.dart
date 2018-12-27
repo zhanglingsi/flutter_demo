@@ -7,10 +7,14 @@ import 'package:flutter/material.dart';
  * 另：Object 类中 runtimeType 运行期类型
  */
 class DemoCategory {
-  const DemoCategory(
-      {@required this.name, @required this.icon, @required this.routerName})
+  const DemoCategory({
+      @required this.name,
+      @required this.icon,
+      @required this.routerName,
+      @required this.buildRoute})
       : assert(name != null),
         assert(icon != null),
+        assert(buildRoute != null),
         assert(routerName != null);
   @required
   final String name; // 类型名称
@@ -18,6 +22,8 @@ class DemoCategory {
   final IconData icon; // 类型对应的图标
   @required
   final String routerName; // 路由名称
+  @required
+  final WidgetBuilder buildRoute; // 路由对应的Widget
 
   @override
   bool operator ==(dynamic other) {
