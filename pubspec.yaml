@@ -1,0 +1,41 @@
+name: flutter_demo
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+
+  flutter_localizations:
+    sdk: flutter
+
+  # app中的所有资源文件存储在该依赖包中 https://github.com/zhanglingsi/gallery-assets-china.git
+  # flutter_myapp_assets: 0.1.7
+  flutter_myapp_assets:
+    git:
+      url: https://github.com/zhanglingsi/gallery-assets-china
+      ref: 7debaa75fdf53e7935453b7f3da7eabc29f442d4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - packages/flutter_myapp_assets/videos/bee.mp4
+    - packages/flutter_myapp_assets/videos/butterfly.mp4
+    - packages/flutter_myapp_assets/animated_flutter_lgtm.gif
+    - packages/flutter_myapp_assets/animated_flutter_stickers.webp
+
+  fonts:
+    - family: MyAppIcons
+      fonts:
+        - asset: packages/flutter_myapp_assets/fonts/GalleryIcons.ttf
+
+
